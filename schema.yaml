@@ -68,3 +68,11 @@ components:
           nullable: true
           x-walrus-ui:
             order: 7
+        executed_repeatedly:
+          title: Executed Repeatedly
+          type: boolean
+          description: Allow command to be executed repeatedly.
+          default: false
+          nullable: true
+          x-walrus-ui:
+            order: 8
