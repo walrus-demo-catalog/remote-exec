@@ -1,4 +1,4 @@
-resource "null_resource" "ec2" {
+resource "null_resource" "host" {
   connection {
     type        = var.connection_type
     host        = var.connection_host
@@ -12,4 +12,8 @@ resource "null_resource" "ec2" {
   provisioner "remote-exec" {
     inline = [var.script_path]
   }
+
+  triggers = {
+    always_run = var.executed_repeatedly == true ? "${timestamp()}" : null
+  }  
 }

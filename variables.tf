@@ -40,3 +40,9 @@ variable "script_path" {
   description = "The scrpit path of the resource for remote execution."
   default     = "/opt/script.sh"
 }
+
+variable "executed_repeatedly" {
+  type        = bool
+  description = "Allow command to be executed repeatedly."
+  default     = false
+}
